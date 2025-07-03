@@ -318,4 +318,46 @@
     width: 100%;
     height: auto;
   }
+      .site-name {
+display: none;}
+.sitename{font-weight: bold;}
 }
+@media (min-width: 769px) {
+  /* إخفاء المنيو والقائمة الجانبية والـ Overlay */
+  #menu-button,
+  #sidebar,
+  #overlay {
+    display: none !important;
+  }
+
+  /* تعديل شريط العلوي */
+  .top-bar {
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+
+  .left-group {
+    margin-right: auto;
+    gap: 10px;
+  }
+
+  .logo img {
+    display: none; /* حذف الأيقونة */
+  }
+
+  .site-name {
+    color: #4caf50; /* أخضر */
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .top-btn {
+    margin-left: auto;
+  }
+  .sitename{display: none;
+  }
+  }
+  
