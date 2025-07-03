@@ -25,12 +25,21 @@
   gap: 15px;
 }
 
-.menu {
-  font-weight: bold;
-  font-size: 18px;
+.menu-icon {
+  font-size: 28px;
+  color: #4caf50; /* لون أخضر */
   cursor: pointer;
-  color: #4caf50; 
   user-select: none;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.menu-icon:focus {
+  outline: 2px solid #4caf50; /* إظهار تركيز عند التبويب */
+  outline-offset: 2px;
 }
 
 .logo {
@@ -100,6 +109,17 @@
   font-size: 26px;
   cursor: pointer;
   color: #212121;
+  user-select: none;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.close-btn:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
 }
 
 .sidebar-links {
@@ -254,13 +274,17 @@
 /* Responsive */
 @media (max-width: 768px) {
   .top-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: nowrap; /* منع الالتفاف */
+    justify-content: space-between; /* عناصر على الأطراف */
+    align-items: center;
+    gap: 0;
   }
 
   .left-group {
     order: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
 
   .top-btn {
@@ -280,22 +304,4 @@
     width: 100%;
     height: auto;
   }
-}
-@media only screen and (min-width: 769px) {
-  /* هنا تصميم الكمبيوتر */
-}
-.menu-icon {
-  font-size: 28px;
-  color: #4caf50; /* لون أخضر */
-  cursor: pointer;
-  user-select: none;
-  display: inline-block;
-  padding: 0;
-  border: none;
-  background: none;
-  outline: none;
-}
-.menu-icon:focus {
-  outline: 2px solid #4caf50; /* إظهار تركيز عند التبويب */
-  outline-offset: 2px;
 }
