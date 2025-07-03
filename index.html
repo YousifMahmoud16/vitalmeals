@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Meals - Nourish Your Life</title>
+    <meta name="description"
+        content="Vital Meals offers healthy, delicious, and culturally diverse recipes with weekly meal plans and nutrition tips." />
+    <meta name="keywords"
+        content="healthy recipes, meal plans, international cuisine, diet meals, nutrition, food blog" />
+    <meta name="author" content="Vital Meals" />
+    <link rel="icon" href="/images/head-favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/home.css">
+    <meta property="og:title" content="Vital Meals - Nourish Your Life" />
+    <meta property="og:description" content="Explore vibrant meals, healthy dishes, and global recipes that inspire." />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:url" content="https://vitalmeals.com" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Vital Meals",
+            "url": "https://vitalmeals.com",
+            "logo": "https://vitalmeals.com/images/logo.png",
+            "sameAs": []
+        }
+    </script>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-group">
+            <nav class="menu" id="menu-button">☰ Menu</nav>
+            <div class="logo">
+                <img src="/images/favicon.ico" alt="Vital Meals Logo" height="50" />
+                <span class="site-name">Vital Meals</span>
+            </div>
+        </div>
+        <button class="top-btn">Subscribe</button>
+    </header>
+    <!-- القائمة الجانبية -->
+    <aside id="sidebar" class="sidebar hidden">
+        <div class="sidebar-header">
+            <span class="close-btn" id="close-sidebar">&times;</span>
+            <h3>Menu</h3>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Meal Plans</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </aside>
+
+    <!-- خلفية شفافة عند فتح القائمة -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <main class="main-content">
+        <section class="featured-article">
+            <img src="images/featured.jpg" alt="Featured Article">
+            <p class="section">Healthy Eating</p>
+            <h2 class="article-title">5 Refreshing Summer Salads You’ll Love</h2>
+            <p class="excerpt">Discover light and tasty salad ideas packed with flavor and nutrients, perfect for hot
+                days...</p>
+        </section>
+
+        <section class="latest">
+            <h3>The Latest</h3>
+            <div class="article-preview">
+                <img src="images/latest1.jpg" alt="Latest Article 1">
+                <div>
+                    <p class="section">Meal Plans</p>
+                    <h4>Weekly Meal Prep: Save Time, Eat Better</h4>
+                </div>
+            </div>
+            <div class="article-preview">
+                <img src="images/latest2.jpg" alt="Latest Article 2">
+                <div>
+                    <p class="section">International</p>
+                    <h4>Authentic Thai Dishes for Beginners</h4>
+                </div>
+            </div>
+            <div class="article-preview">
+                <img src="images/latest3.jpg" alt="Latest Article 3">
+                <div>
+                    <p class="section">Nutrition</p>
+                    <h4>Top 10 Superfoods to Add to Your Diet</h4>
+                </div>
+            </div>
+            <button class="more-btn">More Articles</button>
+        </section>
+
+        <section class="trending">
+            <h3>Trending</h3>
+            <div class="trending-articles">
+                <img src="images/trending1.jpg" alt="Trending Article 1">
+                <img src="images/trending2.jpg" alt="Trending Article 2">
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/menu.js"></script>
+</body>
+
+</html>
