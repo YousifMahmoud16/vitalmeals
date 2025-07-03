@@ -17,22 +17,23 @@
     <meta property="og:image" content="images/og-image.jpg" />
     <meta property="og:url" content="https://vitalmeals.com" />
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Vital Meals",
-            "url": "https://vitalmeals.com",
-            "logo": "https://vitalmeals.com/images/logo.png",
-            "sameAs": []
-        }
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vital Meals",
+        "url": "https://vitalmeals.com",
+        "logo": "https://vitalmeals.com/images/logo.png",
+        "sameAs": []
+    }
     </script>
 </head>
 
 <body>
     <header class="top-bar">
         <div class="left-group">
-            <!-- زر فتح القائمة -->
-            <button id="menu-button" aria-label="Open Menu" class="menu-button">☰ Menu</button>
+            <!-- زر فتح القائمة بدون إطار زر -->
+            <div id="menu-button" class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">☰</div>
+
             <div class="logo">
                 <img src="/images/favicon.ico" alt="Vital Meals Logo" height="50" />
                 <span class="site-name">Vital Meals</span>
@@ -42,9 +43,10 @@
     </header>
 
     <!-- القائمة الجانبية -->
-    <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar" role="navigation" aria-label="Primary Menu">
         <div class="sidebar-header">
-            <button class="close-btn" id="close-sidebar" aria-label="Close Menu">&times;</button>
+            <!-- زر الإغلاق بدون إطار زر -->
+            <div class="close-btn" id="close-sidebar" aria-label="Close Menu" role="button" tabindex="0">&times;</div>
             <h3>Menu</h3>
         </div>
         <ul class="sidebar-links">
@@ -57,10 +59,9 @@
     </aside>
 
     <!-- خلفية شفافة عند فتح القائمة -->
-    <div id="overlay" class="overlay"></div>
+    <div id="overlay" class="overlay hidden"></div>
 
     <main class="main-content">
-        <!-- باقي محتوى الصفحة كما هو -->
         <section class="featured-article">
             <img src="images/featured.jpg" alt="Featured Article" />
             <p class="section">Healthy Eating</p>
