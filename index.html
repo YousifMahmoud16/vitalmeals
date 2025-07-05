@@ -18,58 +18,77 @@
     <meta property="og:url" content="https://vitalmeals.com" />
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-"@type": "Organization",
-"name": "Vital Meals",
-    "url": "https://vitalmeals.com",
-    "logo": "https://vitalmeals.com/images/logo.png",
-    "sameAs": []
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vital Meals",
+        "url": "https://vitalmeals.com",
+        "logo": "https://vitalmeals.com/images/logo.png",
+        "sameAs": []
     }
-</script>
+    </script>
 </head>
 
 <body>
     <header class="top-bar">
         <div class="left-group">
-            <!-- زر فتح القائمة بدون إطار زر -->
             <div id="menu-button" class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">☰</div>
-
-            <div class="logo">
-                <img src="/images/favicon.ico" alt="Vital Meals Logo" height="50" />
-                <span class="site-name">VITAL MEALS</span>
-                <span class="sitename">Vital Meals</span>
-
-            </div>
+            <a href="/" class="logo-link">
+                <div class="logo">
+                    <img src="/images/favicon.ico" alt="Vital Meals Logo" height="50" />
+                    <a href="/" class="site-name">VITAL MEALS</a>
+                    <a href="/" class="sitename">Vital Meals</a>
+                </div>
+            </a>
         </div>
         <button class="top-btn">Subscribe</button>
     </header>
 
-    <!-- القائمة الجانبية -->
+    <!-- Sidebar -->
     <aside id="sidebar" class="sidebar" role="navigation" aria-label="Primary Menu">
         <div class="sidebar-header">
-            <!-- زر الإغلاق بدون إطار زر -->
             <div class="close-btn" id="close-sidebar" aria-label="Close Menu" role="button" tabindex="0">&times;</div>
             <h3>Menu</h3>
         </div>
         <ul class="sidebar-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">Recipes</a></li>
-            <li><a href="#">Meal Plans</a></li>
+
+            <li class="has-submenu">
+                <div class="submenu-toggle">
+                    <a href="#" class="submenu-label">Meal Plans</a>
+                    <span class="arrow">▸</span>
+                </div>
+                <ul class="submenu hidden">
+                    <li><a href="#">7-Day Plans</a></li>
+                    <li><a href="#">Budget Meal Plans</a></li>
+                    <li><a href="#">For Students</a></li>
+                    <li><a href="#">Printable Plans</a></li>
+                </ul>
+            </li>
+
             <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Weight Loss</a></li>
+            <li><a href="#">Muscle Gain</a></li>
+            <li><a href="#">Healthy Eating</a></li>
+            <li><a href="#">Beginner Diets</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </aside>
 
-    <!-- خلفية شفافة عند فتح القائمة -->
     <div id="overlay" class="overlay hidden"></div>
 
     <main class="main-content">
         <section class="featured-article">
-            <img src="images/featured.jpg" alt="Featured Article" />
-            <p class="section">Healthy Eating</p>
-            <h2 class="article-title">5 Refreshing Summer Salads You’ll Love</h2>
+            <img src="/images/7-day-meal-plan.webp"
+                alt="Healthy meal with chicken, greens, and grains for muscle gain" />
+            <p class="section">Meal Plans</p>
+            <h2 class="article-title">
+                <a href="/meal-plans/7-day-meal-plan-for-weight-loss-and-muscle-gain.html">7-Day Meal Plan for Weight
+                    Loss and Muscle Gain</a>
+            </h2>
             <p class="excerpt">
-                Discover light and tasty salad ideas packed with flavor and nutrients, perfect for hot days...
+                Follow this simple and affordable 7-day meal plan to lose fat and build lean muscle. High-protein meals,
+                and balanced macros.
             </p>
         </section>
 
@@ -108,7 +127,35 @@
         </section>
     </main>
 
-    <script src="/scripts/menu.js"></script>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>VITAL MEALS</h3>
+                <p>Simple, balanced, and effective nutrition for every lifestyle. Explore healthy meal plans, smart
+                    tips, and more.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="meal-plans.html">Meal Plans</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <strong>VITAL MEALS</strong> — All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
+<script src="/scripts/menu.js"></script>
 
 </html>

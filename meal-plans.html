@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meal Plans | VitalMeals</title>
+    <meta name="description" content="Browse our curated meal plans for weight loss, muscle gain, and healthy living.">
+    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="left-group">
+            <div id="menu-button" class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">☰</div>
+            <div class="logo">
+                <a href="/"><img src="/images/favicon.ico" alt="Vital Meals Logo" height="50" /></a>
+                <a href="/" class="site-name">VITAL MEALS</a>
+                <a href="/" class="sitename">Vital Meals</a>
+            </div>
+        </div>
+        <button class="top-btn">Subscribe</button>
+    </header>
+
+    <!-- Sidebar (if needed) -->
+    <aside id="sidebar" class="sidebar" role="navigation" aria-label="Primary Menu">
+        <div class="sidebar-header">
+            <div class="close-btn" id="close-sidebar" aria-label="Close Menu" role="button" tabindex="0">&times;</div>
+            <h3>Menu</h3>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Weight Loss</a></li>
+            <li><a href="#">Muscle Gain</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </aside>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <main class="main-content">
+        <h1 style="margin-bottom: 10px;">Meal Plans</h1>
+        <p style="margin-bottom: 30px;">Explore curated 7-day meal plans for burning fat, building muscle, and improving
+            your overall health — designed for real-life simplicity and results.</p>
+
+        <section class="featured-article">
+            <a href="/articles/7-day-meal-plan.html">
+                <img src="/images/7-day-meal-plan.webp"
+                    alt="Healthy meal with chicken, greens, and grains for muscle gain">
+            </a>
+            <h2 class="article-title">
+                <a href="/meal-plans/7-day-meal-plan-for-weight-loss-and-muscle-gain.html">7-Day Meal Plan for Weight
+                    Loss and Muscle Gain</a>
+            </h2>
+            <p class="excerpt">
+                Discover a simple and affordable 7-day plan designed to help you burn fat and build muscle using
+                high-protein meals and clean ingredients — includes printable PDF.
+            </p>
+        </section>
+
+        <section class="featured-article">
+            <a href="coming-soon.html">
+                <img src="/images/7-day-meal-plan.web" alt="coming soon">
+            </a>
+            <h2 class="article-title">
+                <a href="coming-soon.html">COMING SOON</a>
+            </h2>
+            <p class="excerpt">
+
+            </p>
+        </section>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>VITAL MEALS</h3>
+                <p>Smart, simple, and science-backed meal plans for every lifestyle.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Meal Plans</a></li>
+                    <li><a href="#">Healthy Recipes</a></li>
+                    <li><a href="#">Nutrition Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Vital Meals. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Sidebar toggle
+        document.getElementById("menu-button").onclick = () => {
+            document.getElementById("sidebar").classList.add("visible");
+            document.getElementById("overlay").classList.remove("hidden");
+        };
+        document.getElementById("close-sidebar").onclick = () => {
+            document.getElementById("sidebar").classList.remove("visible");
+            document.getElementById("overlay").classList.add("hidden");
+        };
+        document.getElementById("overlay").onclick = () => {
+            document.getElementById("sidebar").classList.remove("visible");
+            document.getElementById("overlay").classList.add("hidden");
+        };
+    </script>
+
+</body>
+
+</html>

@@ -22,3 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('hidden');
     });
 });
+document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const parent = toggle.closest('.has-submenu');
+        const submenu = parent.querySelector('.submenu');
+        submenu.classList.toggle('hidden');
+        parent.classList.toggle('open');
+    });
+});
