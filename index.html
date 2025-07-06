@@ -12,6 +12,7 @@
     <meta name="author" content="Vital Meals" />
     <link rel="icon" href="/images/head-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/home.css" />
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <meta property="og:title" content="Vital Meals - Nourish Your Life" />
     <meta property="og:description" content="Explore vibrant meals, healthy dishes, and global recipes that inspire." />
     <meta property="og:image" content="images/og-image.jpg" />
@@ -26,6 +27,33 @@
         "sameAs": []
     }
     </script>
+    <style>
+        #subscribe-form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        #subscribe-form.hidden {
+            display: none;
+        }
+
+        #subscribe-form-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +68,49 @@
                 </div>
             </a>
         </div>
-        <button class="top-btn">Subscribe</button>
+        <button id="show-subscribe-form" class="top-btn">Subscribe</button>
+    </header>
+
+    <!-- Embedded Mailchimp Form -->
+    <div id="subscribe-form" class="hidden">
+        <button id="subscribe-form-close" title="Close">&times;</button>
+        <div id="mc_embed_signup">
+            <form
+                action="https://dev.us7.list-manage.com/subscribe/post?u=eefd98ada921612aa9c33d354&amp;id=80881d98c5&amp;f_id=003c99e0f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank">
+                <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-PHONE">Phone Number </label>
+                        <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="">
+                        <span id="mce-PHONE-HELPERTEXT" class="helper_text">(optional)</span>
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                        <input type="text" name="b_eefd98ada921612aa9c33d354_80881d98c5" tabindex="-1" value="">
+                    </div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
+                                value="Subscribe">
+                            <p style="margin:0 auto;"><a href="http://eepurl.com/jiEzQA" title="Mailchimp"><img
+                                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                                        alt="Intuit Mailchimp" style="width: 220px; height: 40px;"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     </header>
 
     <!-- Sidebar -->
@@ -156,6 +226,30 @@
     </footer>
     <script
         id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/eefd98ada921612aa9c33d354/29a0b4d45f334e2c7702b4c27.js");</script>
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script>
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+            fnames[4] = 'PHONE'; ftypes[4] = 'phone';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+
+    <script>
+        const subscribeForm = document.getElementById("subscribe-form");
+        const showFormBtn = document.getElementById("show-subscribe-form");
+        const closeFormBtn = document.getElementById("subscribe-form-close");
+
+        showFormBtn.addEventListener("click", function () {
+            subscribeForm.classList.remove("hidden");
+        });
+
+        closeFormBtn.addEventListener("click", function () {
+            subscribeForm.classList.add("hidden");
+        });
+    </script>
 </body>
 <script src="/scripts/menu.js"></script>
 
