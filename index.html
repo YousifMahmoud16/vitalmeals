@@ -66,6 +66,32 @@
                     <a href="/" class="site-name">VITAL MEALS</a>
                     <a href="/" class="sitename">Vital Meals</a>
                 </div>
+                <nav class="desktop-nav">
+                    <ul class="nav-links">
+                        <li><a href="#">World Recipes</a></li>
+                        <li class="has-subnav">
+                            <a href="#">Meal Plans</a>
+                            <ul class="dropdown">
+                                <li><a href="#">7-Day Plans</a></li>
+                                <li><a href="#">Budget Meal Plans</a></li>
+                                <li><a href="#">For Students</a></li>
+                                <li><a href="#">Printable Plans</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="#">Diet</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Keto-Friendly</a></li>
+                                <li><a href="#">Low-Carb</a></li>
+                                <li><a href="#">High-Protein</a></li>
+                                <li><a href="#">Vegan Diet</a></li>
+                                <li><a href="#">Intermittent Fasting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+
             </a>
         </div>
         <button id="show-subscribe-form" class="top-btn">Subscribe</button>
@@ -120,8 +146,9 @@
             <h3>Menu</h3>
         </div>
         <ul class="sidebar-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recipes</a></li>
+            <li><a href="/">Home</a></li>
+
+            <li><a href="#">World Recipes</a></li>
 
             <li class="has-submenu">
                 <div class="submenu-toggle">
@@ -136,11 +163,20 @@
                 </ul>
             </li>
 
-            <li><a href="#">Nutrition</a></li>
-            <li><a href="#">Weight Loss</a></li>
-            <li><a href="#">Muscle Gain</a></li>
-            <li><a href="#">Healthy Eating</a></li>
-            <li><a href="#">Beginner Diets</a></li>
+            <li class="has-submenu">
+                <div class="submenu-toggle">
+                    <a href="#" class="submenu-label">Diet</a>
+                    <span class="arrow">▸</span>
+                </div>
+                <ul class="submenu hidden">
+                    <li><a href="#">Keto-Friendly</a></li>
+                    <li><a href="#">Low-Carb</a></li>
+                    <li><a href="#">High-Protein</a></li>
+                    <li><a href="#">Vegan Diet</a></li>
+                    <li><a href="#">Intermittent Fasting</a></li>
+                </ul>
+            </li>
+
             <li><a href="#">About</a></li>
         </ul>
     </aside>
@@ -165,27 +201,34 @@
         <section class="latest">
             <h3>The Latest</h3>
             <div class="article-preview">
-                <img src="images/latest1.jpg" alt="Latest Article 1" />
+                <img src="/images/chicken-salad.webp" alt="Chicken Salad Recipe" />
                 <div>
-                    <p class="section">Meal Plans</p>
-                    <h4>Weekly Meal Prep: Save Time, Eat Better</h4>
-                </div>
+                    <p class="section">Diet/High Protein</p>
+                    <h2 class="article-title">
+                        <a href="/diet/high-protein/kardea-brown-chicken-salad.html">Kardea Brown Chicken Salad
+                            Recipe</a>
+                    </h2>
+                    <p class="excerpt">
+                        Discover a healthy and satisfying high-protein chicken salad inspired by Kardea Brown. Packed
+                        with lean protein, fresh vegetables, and bold flavor — this easy recipe is perfect for weight
+                        loss, muscle gain, or clean eating goals.
+                    </p>
+        </section>
+        <div class="article-preview">
+            <img src="images/latest2.jpg" alt="Latest Article 2" />
+            <div>
+                <p class="section">International</p>
+                <h4>Authentic Thai Dishes for Beginners</h4>
             </div>
-            <div class="article-preview">
-                <img src="images/latest2.jpg" alt="Latest Article 2" />
-                <div>
-                    <p class="section">International</p>
-                    <h4>Authentic Thai Dishes for Beginners</h4>
-                </div>
+        </div>
+        <div class="article-preview">
+            <img src="images/latest3.jpg" alt="Latest Article 3" />
+            <div>
+                <p class="section">Nutrition</p>
+                <h4>Top 10 Superfoods to Add to Your Diet</h4>
             </div>
-            <div class="article-preview">
-                <img src="images/latest3.jpg" alt="Latest Article 3" />
-                <div>
-                    <p class="section">Nutrition</p>
-                    <h4>Top 10 Superfoods to Add to Your Diet</h4>
-                </div>
-            </div>
-            <button class="more-btn">More Articles</button>
+        </div>
+        <button class="more-btn">More Articles</button>
         </section>
 
         <section class="trending">
@@ -208,6 +251,8 @@
                 <h4>Explore</h4>
                 <ul>
                     <li><a href="meal-plans.html">Meal Plans</a></li>
+                    <li><a href="/high-protein.html">High Protein Recipes</a></li>
+
                 </ul>
             </div>
             <div class="footer-column">
